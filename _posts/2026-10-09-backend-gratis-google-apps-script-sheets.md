@@ -4,7 +4,7 @@ title: "Backend Gratis dengan Google Apps Script dan Sheets"
 description: "Cara membuat aplikasi web tanpa server sendiri: Google Sheets sebagai database, Apps Script sebagai API, dan GitHub Pages sebagai tampilan."
 date: 2026-10-09 08:00:00 +0700
 tags: [tutorial, google-apps-script, web]
-published: false   # hapus baris ini setelah tulisan selesai
+
 # image: /assets/images/backend-gratis-apps-script.png
 # image_alt: Diagram alur data dari GitHub Pages ke Apps Script dan Google Sheets
 ---
