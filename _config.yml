@@ -54,7 +54,7 @@ markdown: kramdown
 excerpt_separator: "<!--more-->"
 permalink: /:year/:month/:day/:title/
 paginate: 6
-paginate_path: "/halaman/:num/"
+paginate_path: "/halaman:num/"
 timezone: Asia/Jakarta
 plugins:
   - jekyll-feed
