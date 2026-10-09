@@ -59,3 +59,24 @@ Lalu daftarkan `https://andu.my.id/blog/sitemap.xml` di Google Search Console.
 ## Komentar (opsional)
 
 Pasang giscus (https://giscus.app) lalu isi `repo`, `repo_id`, `category`, `category_id` di `_config.yml`.
+
+## Google AdSense (opsional)
+
+Sebelum disetujui, biarkan `adsense.client` kosong: tidak ada skrip atau iklan yang dimuat.
+
+Setelah disetujui, isi di `_config.yml`:
+
+```yaml
+adsense:
+  client: "ca-pub-1234567890123456"
+  slot_atas: "1111111111"
+  slot_tengah: "2222222222"
+  slot_bawah: "3333333333"
+```
+
+- Buat tiga unit iklan "Display, responsif" di AdSense dan salin ID slot masing-masing.
+- Iklan tengah muncul sebelum subjudul kedua (`##`), jadi tulisan butuh minimal dua subjudul.
+- Slot yang dikosongkan tidak ditampilkan. Jika memakai Auto ads, cukup isi `client`.
+- Tambahkan `noads: true` di front matter halaman atau tulisan yang tidak boleh menampilkan iklan.
+- Halaman Kebijakan Privasi dan Kontak sudah tersedia di `/privasi/` dan `/kontak/`. Periksa dan sesuaikan isinya.
+- Letakkan `ads.txt` di repo situs utama (lihat folder `untuk-repo-utama`).

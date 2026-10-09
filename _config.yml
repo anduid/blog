@@ -30,6 +30,18 @@ nav:
   - { judul: Topik, url: /topik/ }
   - { judul: Tentang, url: /tentang/ }
 
+# Menu di footer
+nav_footer:
+  - { judul: Kontak, url: /kontak/ }
+  - { judul: Kebijakan Privasi, url: /privasi/ }
+
+# Google AdSense (opsional). Biarkan client kosong jika belum disetujui: tidak ada skrip/iklan yang dimuat.
+adsense:
+  client: ""        # contoh: ca-pub-1234567890123456
+  slot_atas: ""     # ID unit iklan di bawah judul tulisan (angka)
+  slot_tengah: ""   # ID unit iklan di tengah tulisan (butuh minimal 2 subjudul ##)
+  slot_bawah: ""    # ID unit iklan di bawah tulisan
+
 # Komentar (opsional): isi lengkap dari https://giscus.app, jika kosong komentar tidak tampil
 giscus:
   repo: ""

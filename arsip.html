@@ -3,6 +3,7 @@ layout: page
 title: Arsip Tulisan
 description: Daftar seluruh tulisan di Blog Andu, dikelompokkan per tahun dan diurutkan dari yang terbaru.
 permalink: /arsip/
+noads: true
 ---
 {% assign per_tahun = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
 {% for tahun in per_tahun %}

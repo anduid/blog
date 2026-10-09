@@ -184,6 +184,12 @@ a:hover { text-decoration-thickness: 2px; }
 .komentar { margin-top: 3rem; }
 .komentar h2 { font-size: 1.35rem; letter-spacing: -.02em; }
 
+/* ===== Iklan ===== */
+.iklan { margin: 2rem 0; padding: .6rem .75rem .9rem; border: 1px solid var(--garis); border-radius: 12px; background: var(--permukaan); min-height: 17rem; overflow: hidden; text-align: center; }
+.iklan-label { margin: 0 0 .5rem; font-size: .72rem; color: var(--redup); text-align: center; }
+.iklan ins { min-height: 15rem; }
+.isi-tulisan > .iklan { margin: 2.25rem 0; }
+
 /* ===== Arsip & cari ===== */
 .arsip { list-style: none; padding: 0; margin: 0 0 1.5rem; }
 .arsip li { display: flex; gap: 1rem; padding: .6rem 0; border-bottom: 1px solid var(--garis); }
@@ -224,4 +230,4 @@ a:hover { text-decoration-thickness: 2px; }
   .penulis { flex-direction: column; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
-@media print { .kepala, .kaki, .sebelah, .bagikan, .komentar { display: none; } body { background: #fff; color: #000; } }
+@media print { .kepala, .kaki, .sebelah, .bagikan, .komentar, .iklan { display: none; } body { background: #fff; color: #000; } }

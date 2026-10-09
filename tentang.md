@@ -3,6 +3,7 @@ layout: page
 title: Tentang
 description: Kenal lebih dekat dengan penulis Blog Andu, pengembang dan pendiri andu.my.id di Bekasi.
 permalink: /tentang/
+noads: true
 ---
 Halo, saya **Andu**. Blog ini adalah tempat saya menulis catatan, cerita, dan hal-hal yang saya pelajari saat membangun aplikasi dan solusi digital.
 

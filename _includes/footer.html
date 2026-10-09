@@ -11,6 +11,7 @@
       <p class="kaki-judul">Blog</p>
       {% for item in site.nav %}<a href="{{ item.url | relative_url }}">{{ item.judul }}</a>{% endfor %}
       <a href="{{ '/cari/' | relative_url }}">Cari</a>
+      {% for item in site.nav_footer %}<a href="{{ item.url | relative_url }}">{{ item.judul }}</a>{% endfor %}
     </nav>
     <nav class="kaki-kolom" aria-label="Tautan lain">
       <p class="kaki-judul">Ikuti</p>

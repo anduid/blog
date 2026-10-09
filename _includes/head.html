@@ -63,6 +63,11 @@
 
 {% feed_meta %}
 
+{% if site.adsense.client and site.adsense.client != "" %}
+<meta name="google-adsense-account" content="{{ site.adsense.client }}">
+{% unless page.noads %}<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense.client }}" crossorigin="anonymous"></script>{% endunless %}
+{% endif %}
+
 <!-- Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

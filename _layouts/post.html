@@ -30,7 +30,23 @@ layout: default
   </figure>
   {% endif %}
 
-  <div class="isi-tulisan" itemprop="articleBody">{{ content }}</div>
+  {% include iklan.html posisi="atas" slot=site.adsense.slot_atas %}
+
+  <div class="isi-tulisan" itemprop="articleBody">
+    {%- assign potong = content | split: '<h2' -%}
+    {%- if potong.size > 2 and site.adsense.slot_tengah and site.adsense.slot_tengah != "" -%}
+      {%- for b in potong -%}
+        {%- if forloop.first -%}{{ b }}{%- else -%}
+          {%- if forloop.index == 3 -%}{% include iklan.html posisi="tengah" slot=site.adsense.slot_tengah %}{%- endif -%}
+          <h2{{ b }}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- else -%}
+      {{ content }}
+    {%- endif -%}
+  </div>
+
+  {% include iklan.html posisi="bawah" slot=site.adsense.slot_bawah %}
 
   <aside class="bagikan" aria-label="Bagikan tulisan">
     <p class="bagikan-judul">Bagikan tulisan ini</p>
