@@ -37,7 +37,7 @@ nav_footer:
 
 # Google AdSense (opsional). Biarkan client kosong jika belum disetujui: tidak ada skrip/iklan yang dimuat.
 adsense:
-  client: ""        # contoh: ca-pub-1234567890123456
+  client: "1088097367723130"        # contoh: ca-pub-1234567890123456
   slot_atas: ""     # ID unit iklan di bawah judul tulisan (angka)
   slot_tengah: ""   # ID unit iklan di tengah tulisan (butuh minimal 2 subjudul ##)
   slot_bawah: ""    # ID unit iklan di bawah tulisan
