@@ -1,5 +1,6 @@
-{% if site.giscus.repo != "" and site.giscus.repo %}
+{% if site.giscus.repo and site.giscus.repo != "" and site.giscus.repo_id != "" %}
 <section class="komentar" aria-label="Komentar">
+  <h2>Komentar</h2>
   <script src="https://giscus.app/client.js"
     data-repo="{{ site.giscus.repo }}"
     data-repo-id="{{ site.giscus.repo_id }}"

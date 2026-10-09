@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Contoh format tulisan: gambar, kode, kutipan, tabel"
+description: "Panduan singkat format Markdown yang bisa dipakai di Blog Andu: daftar, kutipan, blok kode, tabel, dan gambar."
 date: 2026-10-08 09:30:00 +0700
 tags: [tutorial, markdown]
 ---
@@ -38,10 +39,19 @@ function sapa(nama) {
 | RSS   | Tersedia di /feed.xml |
 | Tema  | Terang dan gelap |
 
-## Gambar
+## Gambar dan pratinjau media sosial
 
-Simpan gambar di `assets/images/`, lalu panggil seperti ini:
+Untuk gambar sampul yang juga dipakai sebagai pratinjau di WhatsApp, Facebook, dan X, tambahkan di front matter:
 
-```markdown
-{% raw %}![Deskripsi gambar]({{ '/assets/images/foto.jpg' | relative_url }}){% endraw %}
+```yaml
+image: /assets/images/nama-gambar.jpg
+image_alt: Deskripsi singkat gambar
 ```
+
+Ukuran ideal 1200 x 630 piksel. Untuk gambar di dalam isi tulisan:
+
+{% raw %}
+```markdown
+![Deskripsi gambar]({{ '/assets/images/foto.jpg' | relative_url }})
+```
+{% endraw %}

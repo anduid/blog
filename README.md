@@ -1,18 +1,25 @@
-# Blog Saya (Jekyll + GitHub Pages)
+# Blog Andu (Jekyll + GitHub Pages)
 
-Blog statis berbahasa Indonesia: tema terang/gelap, pencarian, arsip, topik (tag), RSS, sitemap, SEO, dan komentar opsional.
+Blog statis berbahasa Indonesia dengan desain gelap/terang, SEO lengkap, dan alamat `https://andu.my.id/blog/`.
 
-## Pasang di GitHub Pages
+## Pasang
 
-1. Buat repo publik bernama `USERNAME.github.io`.
-2. Unggah **seluruh isi folder ini** ke repo (Add file > Upload files, atau `git push`).
-3. Buka **Settings > Pages**, pilih **Deploy from a branch**, branch `main`, folder `/ (root)`, lalu Save.
-4. Tunggu 1-2 menit, buka `https://USERNAME.github.io`.
+1. Buat repo publik bernama `blog` di akun GitHub Anda.
+2. Unggah **isi** folder ini ke root repo (bukan folder luarnya).
+3. **Settings > Pages**: Deploy from a branch, branch `main`, folder `/ (root)`.
+4. Pastikan `_config.yml` berisi `url: "https://andu.my.id"` dan `baseurl: "/blog"`.
 
-## Ubah pengaturan
+## Fitur SEO yang sudah terpasang
 
-Edit `_config.yml`: `title`, `tagline`, `description`, `author`, `url`, `github_username`, dan menu `nav`.
-Jika repo bukan `USERNAME.github.io`, isi `baseurl: "/nama-repo"`.
+- `<title>` unik per halaman (format: Judul | Blog Andu)
+- `meta description` (dari `description:` di front matter; jika kosong, otomatis dari ringkasan tulisan)
+- Tag `canonical` di setiap halaman
+- Open Graph dan Twitter Card (judul, deskripsi, gambar, tipe artikel, tanggal terbit)
+- Satu `<h1>` per halaman, judul bagian memakai `<h2>`
+- Data terstruktur JSON-LD (Blog, BlogPosting, BreadcrumbList)
+- Ikon: favicon SVG/ICO/PNG, apple-touch-icon, web manifest
+- `sitemap.xml`, `robots.txt`, RSS (`feed.xml`)
+- Mobile friendly (viewport, tata letak responsif, menu geser di HP)
 
 ## Menulis tulisan baru
 
@@ -21,35 +28,34 @@ Buat file di `_posts/` bernama `TAHUN-BULAN-TANGGAL-judul.md`:
 ```markdown
 ---
 layout: post
-title: "Judul Tulisan"
+title: "Judul Tulisan (maks. sekitar 60 karakter)"
+description: "Ringkasan 120-160 karakter yang tampil di hasil pencarian Google."
 date: 2026-10-10 08:00:00 +0700
 tags: [catatan]
+image: /assets/images/sampul.jpg   # opsional, 1200x630, dipakai juga untuk pratinjau media sosial
+image_alt: Deskripsi singkat gambar
 ---
-Paragraf pembuka (ini jadi ringkasan di beranda).
+Paragraf pembuka (jadi ringkasan di beranda).
 
 <!--more-->
 
-Isi selanjutnya...
+## Subjudul pertama
+
+Isi tulisan. Gunakan ## untuk subjudul (H2) dan ### untuk sub-subjudul (H3).
 ```
 
-Tanggal tidak boleh di masa depan, kalau tidak tulisan tidak tampil.
+Aturan SEO tulisan: satu H1 saja (otomatis dari `title`), subjudul mulai dari `##`, isi `description`, dan beri `image_alt` jika memakai gambar.
 
-## Halaman baru
+## Robots dan sitemap di domain utama
 
-Buat file `.md` di root dengan `layout: page`, `title`, dan `permalink`. Untuk memasukkannya ke menu, tambahkan di `nav` pada `_config.yml`.
+Google hanya membaca `robots.txt` di akar domain (`https://andu.my.id/robots.txt`). Tambahkan baris ini di sana:
 
-## Gambar
+```
+Sitemap: https://andu.my.id/blog/sitemap.xml
+```
 
-Simpan di `assets/images/` lalu panggil `![teks]({{ '/assets/images/foto.jpg' | relative_url }})`.
+Lalu daftarkan `https://andu.my.id/blog/sitemap.xml` di Google Search Console.
 
 ## Komentar (opsional)
 
-Aktifkan Discussions di repo, pasang aplikasi giscus (https://giscus.app), lalu salin nilai `repo`, `repo_id`, `category`, `category_id` ke `_config.yml`.
-
-## Preview lokal (opsional)
-
-```bash
-bundle install
-bundle exec jekyll serve
-```
-Buka http://localhost:4000
+Pasang giscus (https://giscus.app) lalu isi `repo`, `repo_id`, `category`, `category_id` di `_config.yml`.
